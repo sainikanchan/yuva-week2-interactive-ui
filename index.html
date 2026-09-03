@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Accessible interactive modal UI component built with HTML, CSS and vanilla JavaScript.">
+  <title>Nova Modal Component — Yuva Intern Week 2</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="page">
+    <section class="component-card" aria-labelledby="page-title">
+      <div class="badge">YUVA INTERN · WEEK 2</div>
+      <h1 id="page-title">Interactive Modal Component</h1>
+      <p class="intro">
+        A reusable, responsive and accessible modal built with semantic HTML,
+        CSS transitions and vanilla JavaScript.
+      </p>
+
+      <button class="primary-btn" id="openModal" type="button">
+        Open Modal
+      </button>
+
+      <div class="features">
+        <span>✓ Keyboard accessible</span>
+        <span>✓ Responsive</span>
+        <span>✓ ESC to close</span>
+        <span>✓ Click outside to close</span>
+      </div>
+    </section>
+  </main>
+
+  <!-- Modal -->
+  <div
+    class="modal"
+    id="modal"
+    role="dialog"
+    aria-modal="true"
+    aria-labelledby="modalTitle"
+    aria-describedby="modalDescription"
+    hidden
+  >
+    <div class="modal-backdrop" data-close-modal></div>
+
+    <section class="modal-panel" role="document">
+      <button
+        class="close-btn"
+        id="closeModal"
+        type="button"
+        aria-label="Close dialog"
+      >
+        ×
+      </button>
+
+      <div class="modal-icon" aria-hidden="true">✦</div>
+      <p class="modal-label">NOVA COMPONENT</p>
+      <h2 id="modalTitle">You're ready to build.</h2>
+      <p id="modalDescription">
+        This modal demonstrates DOM manipulation, event handling, transitions,
+        focus management and accessible keyboard interaction using vanilla JavaScript.
+      </p>
+
+      <div class="modal-actions">
+        <button class="secondary-btn" id="cancelModal" type="button">Cancel</button>
+        <button class="primary-btn" id="confirmModal" type="button">Continue</button>
+      </div>
+
+      <p class="feedback" id="feedback" role="status" aria-live="polite"></p>
+    </section>
+  </div>
+
+  <noscript>
+    <div class="noscript-message">
+      JavaScript is disabled. The interactive modal requires JavaScript to operate.
+    </div>
+  </noscript>
+
+  <script src="script.js"></script>
+</body>
+</html>
